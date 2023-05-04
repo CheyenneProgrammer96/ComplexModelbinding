@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using ComplexModelbinding.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ComplexModelbinding.Data
@@ -9,5 +10,9 @@ namespace ComplexModelbinding.Data
             : base(options)
         {
         }
+
+        public DbSet<Instructor> Instructors { get; set; }
+
+        public DbSet<Course> Courses { get; set; }
     }
 }
