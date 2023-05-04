@@ -13,4 +13,15 @@ namespace ComplexModelbinding.Models
 
         public Instructor Teacher { get; set; }
     }
+
+    public class CourseCreateViewModel
+    {
+        public string Title { get; set; }
+
+        public string Description { get; set; }
+
+        public List<Instructor>? AllAvailableInstructors { get; set; }
+
+        public Instructor ChosenInstructor { get; set; }
+    }
 }
