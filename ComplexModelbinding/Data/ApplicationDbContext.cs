@@ -14,5 +14,6 @@ namespace ComplexModelbinding.Data
         public DbSet<Instructor> Instructors { get; set; }
 
         public DbSet<Course> Courses { get; set; }
+
     }
 }

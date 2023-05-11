@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace ComplexModelbinding.Models
 {
@@ -22,6 +23,17 @@ namespace ComplexModelbinding.Models
 
         public List<Instructor>? AllAvailableInstructors { get; set; }
 
-        public Instructor ChosenInstructor { get; set; }
+        public int ChosenInstructor { get; set; }
+    }
+
+    public class CourseIndexViewModel
+    {
+        public int CourseId { get; set; }
+
+        [Display(Name = "Course Title")]
+        public string CourseTitle { get; set; }
+
+        [Display(Name = "Instructor")]
+        public string InstructorName { get; set; }
     }
 }
